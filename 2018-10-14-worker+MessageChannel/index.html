@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	    var w1 = new Worker("worker1.js");
+	    var w2 = new Worker("worker2.js");
+	    var ch = new MessageChannel();
+	    w1.postMessage("port1", [ch.port1]);
+	    w2.postMessage("port2", [ch.port2]);
+	    w2.onmessage = function(e) {
+	        console.log(e.data);
+	    }
+	</script>
+
+</body>
+</html>
