@@ -170,7 +170,7 @@ function add1(str) {
 }
 
 function add2(str) {
-    return str + 2
+    return strinsertBeforeinsertBefore + 2
 }
 
 function add3(str) {

@@ -123,6 +123,7 @@ function updateChildren (parentElm, oldCh, newCh) {
     let newEndIdx = newCh.length - 1;
     let newStartVnode = newCh[0];
     let newEndVnode = newCh[newEndIdx];
+    
     let oldKeyToIdx, idxInOld, elmToMove, refElm;
 
     while (oldStartIdx <= oldEndIdx && newStartIdx <= newEndIdx) {
